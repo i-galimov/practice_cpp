@@ -4,7 +4,7 @@
 #include <cmath>
 
 int main() {
-  int a, b, c, p, res;
+  double a, b, c, p, res;
   std::cin >> a >> b >> c;
   p = (a  + b + c) / 2;
   res = (p * (p - a) * (p - b) * (p - c));
