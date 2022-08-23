@@ -8,20 +8,25 @@ int main() {
   int n, i, min;
   cin >> n;
   i = 0;
-  min = 999999999;
+  min = 0;
   vector <int> a(n);
   while (i < n)
   {
     cin >> a[i];
-    if (a[i] % 2 != 0 && a[i] < min)
+    if (a[i] % 2 != 0)
     {
       min = a[i];
     }
     i++;
   }
-  if (min == 999999999)
+  i = 0;
+  while (i < n)
   {
-    min = 0;
+    if (a[i] % 2 != 0 && a[i] < min)
+    {
+      min = a[i];
+    }
+    i++;
   }
   cout << min;
   return 0;
